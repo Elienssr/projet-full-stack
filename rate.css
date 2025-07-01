@@ -1,0 +1,394 @@
+html {
+    scroll-behavior: smooth;
+}
+
+*, *::before, *::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Tw Cen Mt';
+    font-size: 14px;
+    background-image: url('https://www.hdwallpapersfreedownload.com/uploads/large/3d-and-abstract/white-abstract-new-wallpapers.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+header {
+    background: #51ae36;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: linear-gradient(135deg, #65ae2c, #3e753f);
+    z-index: 10;
+    text-shadow: 2px 2px 5px #094b1a;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.3);
+
+}
+
+nav {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    width: 100%;
+    padding: 30px 0 10px;
+    justify-content: center;
+    gap: 20px;
+}
+
+.search-container {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+nav .home {
+    width: 50px;
+    margin-left: 15px;
+    margin-bottom: 10px;
+}
+
+nav .insta {
+    width: 30px;
+    margin-bottom: 10px;
+}
+
+nav .person {
+    width: 35px;
+    margin-right: 15px;
+    margin-bottom: 10px;
+}
+
+nav .icone {
+    width: 50px;
+    cursor: pointer;
+    margin-bottom: 10px;
+}
+
+    nav .icone:hover, nav .person:hover, nav .insta:hover, nav .home:hover, nav .p:hover {
+        transition: transform 0.6s ease;
+        transform: scale(1.1);
+    }
+
+nav ul {
+    flex: 1;
+    display: flex;
+    justify-self: flex-end;
+    padding-right: 30px;
+    margin-bottom: 10px;
+}
+
+    nav ul li {
+        list-style: none;
+        margin-left: 30px;
+    }
+
+        nav ul li a {
+            text-decoration: none;
+            color: #fff;
+            font-size: 25px;
+            transition: font-size 0.3s ease, color 0.3s ease;
+        }
+
+            nav ul li a:hover {
+                color: #094b1a;
+            }
+
+nav .je:hover {
+    transition: transform 0.6s ease;
+    cursor: pointer;
+}
+
+.h1 {
+    font-size: 50px;
+}
+
+.rate-section {
+    font-size: 25px;
+    text-align: center;
+    margin: 50px auto;
+    width: 50%;
+    height: auto;
+    background: #d1e8c2;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    border-radius: 8px;
+    animation: fadeIn 2s ease-in-out; 
+}
+
+.rating span {
+    font-size: 30px;
+    cursor: pointer;
+    color: #fff;
+}
+
+    .rating span:hover,
+    .rating span.selected {
+        color: #fff200;
+    }
+
+textarea {
+    width: 100%;
+    height: 100px;
+    margin-top: 20px;
+    border: solid;
+    border-color: #808080;
+    border-radius: 5px;
+    animation: fadeIn 2s ease-in-out;
+}
+
+.submit-rating {
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+    .submit-rating:hover {
+        background-color: #45a049;
+    }
+
+#response-message {
+    margin-top: 20px;
+    color: green;
+}
+
+.cart {
+    color: #fff;
+    background-color: #224b0f;
+    margin: 10px;
+}
+
+.total {
+    margin: 10px;
+}
+
+.taskbar {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    right: 0;
+    top: 0;
+    background-color: whitesmoke;
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 60px;
+    color: black;
+    z-index: 9999;
+    border: solid;
+    border-color: rgba(0, 0, 0, 0.2);
+}
+
+    .taskbar.open {
+        width: 300px; 
+        opacity: 1; 
+    }
+
+.taskbar-content {
+    opacity: 0;
+    visibility: hidden; 
+    transition: opacity 0.5s ease, visibility 0s 0s; 
+}
+
+.taskbar.open .taskbar-content {
+    opacity: 0; 
+    visibility: visible; 
+    transition: opacity 0.5s ease, visibility 1s 1s; 
+}
+
+.button {
+    margin-left: 10px;
+    cursor: pointer;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    font-size: 10px;
+    font-weight: bold;
+    height: 40px;
+    width: 90px;
+    font-size: 15px;
+    text-align: center;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+    .button:hover {
+        background-color: lightgrey; 
+        box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+        transform: translateY(-2px);
+    }
+
+    .button:active {
+        background-color: grey;
+        box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1); 
+        transform: translateY(2px);
+    }
+
+#Cart {
+    text-align: center;
+    font-size: 30px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+#h3 {
+    font-size: 20px;
+}
+
+#carrots {
+    width: 140px;
+}
+
+#apples {
+    width: 110px;
+}
+
+#potatoes {
+    width: 140px;
+}
+
+.closebtn {
+    margin: 10px;
+    width: 50px;
+    height: auto;
+}
+
+footer {
+    background: linear-gradient(135deg,#3e753f,#65ae2c);
+    color: white;
+    text-align: center;
+    padding: 30px;
+    width: 100%;
+    bottom: 0;
+    position: fixed;
+}
+
+@media (max-width: 600px) {
+    nav ul li a {
+        font-size: 18px;
+    }
+
+    nav .home {
+        width: 35px;
+    }
+
+    nav .insta {
+        width: 22px;
+    }
+
+    nav .person {
+        width: 28px;
+    }
+
+    nav .image {
+        width: 35px;
+    }
+
+    nav ul li {
+        margin-left: 15px;
+    }
+
+    .rate-section h1 {
+        font-size: 60px;
+    }
+
+    .rate-section {
+        width: 80%;
+        font-size: 18px;
+    }
+
+    .rating span {
+        font-size: 30px;
+    }
+
+    textarea {
+        height: 80px;
+    }
+
+    #Cart {
+        font-size: 24px;
+    }
+
+    .button {
+        width: 80px;
+        font-size: 12px;
+    }
+
+    #carrots, #apples, #potatoes {
+        width: 80px;
+    }
+
+    footer {
+        padding: 20px;
+        font-size: 12px;
+    }
+}
+
+@media (min-width: 601px) and (max-width: 992px) {
+    nav ul li a {
+        font-size: 23px;
+    }
+
+    nav .home {
+        width: 40px;
+    }
+
+    nav .insta {
+        width: 27px;
+    }
+
+    nav .person {
+        width: 33px;
+    }
+
+    nav .image {
+        width: 40px;
+    }
+
+    nav ul li {
+        margin-left: 20px;
+    }
+
+    .rate-section {
+        width: 75%;
+        font-size: 22px;
+    }
+
+    .rating span {
+        font-size: 35px;
+    }
+
+    textarea {
+        height: 90px;
+    }
+
+    #Cart {
+        font-size: 66px;
+    }
+
+    .button {
+        width: 85px;
+        font-size: 14px;
+    }
+
+    #carrots, #apples, #potatoes {
+        width: 100px;
+    }
+
+    footer {
+        padding: 25px;
+        font-size: 13px;
+    }
+}
+
+@media (min-width: 601px) and (max-width: 1200px) {
+    .rate-section h1 {
+        font-size: 60px;
+    }
+
+}

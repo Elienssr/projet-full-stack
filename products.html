@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <title>Product</title>
+    <link rel="stylesheet" href="product.css">
+</head>
+<body>
+
+    <header>
+        <nav>
+
+            <a href="file:///C:/Users/perri/OneDrive/Desktop/projet/home.html">
+            <img src="https://th.bing.com/th/id/R.cdf1b2eaf4537315efd1f515b76140bf?rik=%2fGNRW3FLp4NjPg&riu=http%3a%2f%2fpluspng.com%2fimg-png%2fshop-png-black-and-white-shop-icon-it-s-an-icon-for-finding-local-shopping-the-logo-is-a-square-png-50-px-1600.png&ehk=zRK5ZuwZ71sNUCbaSEQ1lgdjKus5kZTMZ76Np9yMnlc%3d&risl=&pid=ImgRaw&r=0" class="home" /></a>
+
+            <ul>
+                <li class="h"><a href="file:///C:/Users/perri/OneDrive/Desktop/projet/home.html">Home</a></li>
+                <li class="h"><a href="file:///C:/Users/perri/OneDrive/Desktop/projet/products.html">Products</a></li>
+                <li class="h"><a href="file:///C:/Users/perri/OneDrive/Desktop/projet/rate.html">Rate</a></li>
+            </ul>
+
+            <a href="https://www.instagram.com/?hl=en"><img src="https://www.nicepng.com/png/full/1-14885_instagram-logo-transparent-instagram-logo-vector.png" alt="" class="insta"></a>
+            <img src="https://static.vecteezy.com/system/resources/previews/019/787/018/original/shopping-cart-icon-shopping-basket-on-transparent-background-free-png.png" class="icone" onclick="toggleSidebar()">
+            <a href="file:///C:/Users/perri/OneDrive/Desktop/projet/login.html"><img src="https://iconape.com/wp-content/files/nb/368023/svg/person-logo-icon-png-svg.png" alt="" class="person"></a>
+
+        </nav>
+    </header>
+    <main>
+    <div id="gal">
+
+        <aside id="taskbar" class="taskbar">
+            <button class="closebtn" onclick="toggleSidebar()">X</button>
+            <h2 id="Cart" class="cart">Your Cart</h2>
+            <div id="listContainer"></div>
+           <div class="total2"> <h3 id="h3" class="total">Total: $<span id="totalAmount">0</span></h3></div>
+            <button class="button" id="reset" onclick="resetTotal()">Clear Cart</button>
+            <button class="button" id="buy" onclick="confirmOrder()">Purchase</button>
+        </aside>
+        <div class="gallery">
+            <div class="gallery-item">
+                <a href="#meat"><img src="https://www.francies.be/media/images/gallery/166/big/167.jpg" alt="Meat and Poultry"></a>
+                <h3>Meat and Poultry</h3>
+            </div>
+            <div class="gallery-item">
+                <a href="#fruits"><img src="https://th.bing.com/th/id/R.20b626c893327b06ca7ddf420fc13d2f?rik=RYq2pnbdJZJXkw&riu=http%3a%2f%2flecahier.com%2fwp-content%2fuploads%2f2015%2f03%2fcolorful-fruits-and-vegetables.jpg&ehk=e5Kmb74pcgGBP2YoifhZwn5exBXzszUnoIBGD1hDWUw%3d&risl=&pid=ImgRaw&r=0" alt="Fruits and Vegetables"></a>
+                <h3>Fruits and Vegetables</h3>
+            </div>
+            <div class="gallery-item">
+                <a href="#bakery"> <img src="https://th.bing.com/th/id/R.db41cd01dcd896b9cd196dd8d48bc9e8?rik=9tF5nhe6a8QAmg&pid=ImgRaw&r=0" alt="Bakery"></a>
+                <h3>Bakery</h3>
+            </div>
+
+            <div class="gallery-item">
+                <a href="#drinks"><img src="https://ewater.com/product_images/uploaded_images/drinks-in-mason-jars-1200.jpg" alt="Drinks"></a>
+                <h3>Drinks</h3>
+            </div>
+            <div class="gallery-item">
+                <a href="#asian"> <img src="https://www.arcadie.fr/wp-content/uploads/2022/02/cuisine-asiatique.jpg" alt="Asian Cuisine"></a>
+                <h3>Asian Cuisine</h3>
+            </div>
+        </div>
+    </div>
+    <br>
+    <section>
+        <div class="boxrate">
+            <p>Exchange Rate: 1 USD = LBP 89,000</p>
+        </div>
+    </section>
+    <section class="flex" id="meat">
+        <div class="product-card">
+            <img src="https://www.tastingtable.com/img/gallery/pay-close-attention-when-substituting-chicken-breasts-for-thighs/intro-1677090959.jpg" alt="Delicious Product" class="product-image" style="width:170px;">
+            <h2 class="product-title">Chicken breast</h2>
+            <p class="product-description"> Lean, versatile goodness of our boneless, skinless chicken breasts – perfect for grilling and baking  into your favorite dishes</p>
+            <div class="product-price">Per kilogram :  $8.65 USD</div>
+            <button class="buy-button" onclick="add('Chicken Breast',8.65)">Buy Now</button>
+        </div>
+
+        <div class="product-card">
+            <img src="https://www.thelist.com/img/gallery/the-real-reason-you-should-steer-clear-of-pre-packaged-ground-beef/intro-1622644364.jpg" alt="Delicious Product" class="product-image" style="width:170px;">
+            <h2 class="product-title">Ground beef</h2>
+            <p class="product-description"> rich flavor and versatility of our premium ground beef, juicy burgers to savory meatballs, all sourced from the finest cuts.</p>
+            <div class="product-price">Per kilogram : $12.42 USD</div>
+            <button class="buy-button" onclick="add(' Ground beef',12.42)">Buy Now</button>
+        </div>
+        <div class="product-card">
+            <img src="https://img.freepik.com/premium-photo/sliced-sausages-isolated-with-white-background-depth-field_908985-27820.jpg" alt="Delicious Product" class="product-image" style="width:150px;">
+            <h2 class="product-title">Sausage</h2>
+            <p class="product-description">Treat yourself to our mouthwatering sausages, made with the finest ingredients and bursting with flavor in every bite!</p>
+            <div class="product-price">Per kilogram :  $15.45  USD</div>
+            <button class="buy-button" onclick="add('Sausage',15.45)">Buy Now</button>
+        </div>
+        <div class="product-card">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTuuklJYVPijlYtgb-_k8aFYce-3eJnbYQFug&s" alt="Delicious Product" class="product-image" style="width:100px;">
+            <h2 class="product-title">Bacon</h2>
+            <p class="product-description"> crispy goodness premium bacon, sourced from the finest cuts for a breakfast classic or any meal of the day!</p>
+            <div class="product-price">Per kilogram : $6.99 USD</div>
+            <button class="buy-button" onclick="add('Bacon ',6.99)">Buy Now</button>
+        </div>
+    </section>
+
+    <section class="flex">
+        <div class="product-card">
+            <img src="https://img.freepik.com/premium-photo/fresh-salmon-fillet-with-basil-white-background_120872-2192.jpg" alt="Delicious Product" class="product-image" style="width:170px;">
+            <h2 class="product-title">Salmon </h2>
+            <p class="product-description"> Enjoy the rich, buttery flavor and health benefits of fresh, packed with omega-3s for a delicious and nutritious meal.</p>
+            <div class="product-price">Per kilogram : $24.99  USD</div>
+            <button class="buy-button">Buy Now</button>
+        </div>
+        <div class="product-card">
+            <img src="https://www.shutterstock.com/image-photo/whole-roasted-chicken-on-wooden-600nw-493886776.jpg" alt="Delicious Product" class="product-image" style="width:130px;">
+            <h2 class="product-title">Whole chicken</h2>
+            <p class="product-description">Serve your family the unbeatable taste of a tender, juicy whole chicken, and packed with protein for a wholesome meal</p>
+            <div class="product-price">Per kilogram : $5.83 USD</div>
+            <button class="buy-button">Buy Now</button>
+        </div>
+        <div class="product-card">
+            <img src="https://img.freepik.com/premium-photo/steak-with-white-background-high-quality-ultra-hd_889056-10211.jpg" alt="Delicious Product" class="product-image" style="width:100px;">
+            <h2 class="product-title">Steak</h2>
+            <p class="product-description">Treat yourself to a perfectly cooked steak, bursting with rich flavor and tenderness in every juicy bite, ideal for any occasion.</p>
+            <div class="product-price">Per kilogram : $13.99 USD</div>
+            <button class="buy-button">Buy Now</button>
+        </div>
+        <div class="product-card">
+            <img src="https://media.istockphoto.com/id/464298503/photo/prawns.jpg?s=612x612&w=0&k=20&c=YeuW583b5VrEdk6MpITUfJvS4MsAMcxZy9eOKebqJOs=" alt="Delicious Product" class="product-image" style="width:145px;">
+            <h2 class="product-title">Shrimp</h2>
+            <p class="product-description">Indulge in the sweet, succulent meat of premium shrimp, perfect for a luxurious seafood experience or a delicious addition to any dish.</p>
+            <div class="product-price">Per kilogram :$6.99 USD</div>
+            <button class="buy-button">Buy Now</button>
+        </div>
+    </section>
+
+
+    <hr>
+    <section class="flex" id="fruits">
+        <div class="product-card">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSbRqPH9awslp9JpIN3Nbu2yKMiu5Q3ls0hCQ&s" alt="Delicious Product" class="product-image" style="width:170px" ;>
+            <h2 class="product-title">Banana </h2>
+            <p class="product-description">Naturally sweet and energy-packed bananas—perfect for snacking, baking, or smoothies!</p>
+            <div class="product-price">Per kilogram :$ 1.61 USD</div>
+            <button class="buy-button" onclick="add('Banana',1.61)">Buy Now</button>
+        </div>
+        <div class="product-card">
+            <img src="https://www.heddensofwoodtown.co.uk/wp-content/uploads/2020/05/tomatoes_opt.jpg" alt="Delicious Product" class="product-image">
+            <h2 class="product-title">Tomato</h2>
+            <p class="product-description">Juicy, ripe tomatoes bursting with flavor—perfect for salads, sauces, and all your favorite dishes!</p>
+            <div class="product-price">Per kilogram :  $1.00 USD</div>
+            <button class="buy-button" onclick="add('Tomato',1)">Buy Now</button>
+        </div>
+        <div class="product-card">
+            <img src="https://nigerfoods.com/wp-content/uploads/2020/12/p5.jpg" alt="Delicious Product" class="product-image">
+            <h2 class="product-title">Cabbage</h2>
+            <p class="product-description">Fresh, crisp cabbage—ideal for salads, stir-fries, and hearty soups!</p>
+            <div class="product-price">$6.00 USD</div>
+            <button class="buy-button" onclick="add('Cabbage',6)">Buy Now</button>
+        </div>
+        <div class="product-card">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQLEPyvJ8EQO-HNm5qV9W7QnOUFo5VErINCHA&s" alt="Delicious Product" class="product-image" id="potatoes">
+            <h2 class="product-title">Potatoes </h2>
+            <p class="product-description">Versatile, hearty potatoes—perfect for mashing, roasting, or making crispy fries!</p>
+            <div class="product-price">Per kilogram : $ 0.74 USD</div>
+            <button class="buy-button" onclick="add('Potatoes ',0.74)">Buy Now</button>
+        </div>
+    </section>
+    <section class="flex">
+        <div class="product-card">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTZ1nx6cb07bK8BEdRsGYPunb7LOYanzjxh7g&s" alt="Delicious Product" class="product-image" id="apples">
+            <h2 class="product-title">Apples</h2>
+            <p class="product-description">Crisp, juicy apples bursting with natural sweetness—perfect for snacking or baking!</p>
+            <div class="product-price">Per kilogram :  $1.71 USD</div>
+            <button class="buy-button">Buy Now</button>
+        </div>
+        <div class="product-card">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRhB_78A1ij2tZjnhdnOR2GTdzCbpsf1Q9SSw&s" alt="Delicious Product" class="product-image">
+            <h2 class="product-title">Onions</h2>
+            <p class="product-description">Flavor-packed onions—essential for adding depth and richness to any dish!</p>
+            <div class="product-price">Per kilogram :  $0.65 USD</div>
+            <button class="buy-button">Buy Now</button>
+        </div>
+        <div class="product-card">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTwfNY-PW8H1YhQspB00XcfYGJ40wVYdzxuIg&s" alt="Delicious Product" class="product-image">
+            <h2 class="product-title">Watermelon </h2>
+            <p class="product-description">Refreshing and juicy watermelon,perfect for picnics, summer cravings!</p>
+            <div class="product-price">Per kilogram : $2.00 USD</div>
+            <button class="buy-button">Buy Now</button>
+        </div>
+        <div class="product-card">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSaWeS0QOfuO6_jg1_NzfQuG_EuEbr-ecYZQg&s" alt="Delicious Product" class="product-image" id="carrots">
+            <h2 class="product-title">Carrots</h2>
+            <p class="product-description">Versatile, hearty potatoes—perfect for mashing, roasting, or making crispy fries!</p>
+            <div class="product-price">Per kilogram : $1.12 USD</div>
+            <button class="buy-button">Buy Now</button>
+        </div>
+    </section>
+    <hr>
+    <section class="flex" id="bakery">
+        <div class="product-card">
+            <img src="https://img.freepik.com/premium-photo/chocolate-chip-cookies-white-background_146936-712.jpg" alt="Delicious Product" class="product-image" style="width:170px;">
+            <h2 class="product-title">Cookies </h2>
+            <p class="product-description">Deliciously soft and freshly baked cookies, loaded with rich flavors in every bite!</p>
+            <div class="product-price">Per piece : $0.50 USD</div>
+            <button class="buy-button" onclick="add('Cookies',0.5)">Buy Now</button>
+        </div>
+        <div class="product-card">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRwU2B0lgeZJV_L50_2ihdecmmotRgNXWA1Tg&s" alt="Delicious Product" class="product-image">
+            <h2 class="product-title">Croissants</h2>
+            <p class="product-description">Buttery, golden croissants with a perfectly flaky texture—an irresistible treat for any time of day!"</p>
+            <div class="product-price">Per piece : $1.00 USD</div>
+            <button class="buy-button" onclick="add('Croissant',1)">Buy Now</button>
+        </div>
+        <div class="product-card">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQmPZPdj1xqq7x6vA0J9Q4niKa0oCtzIxR2Yg&s" alt="Delicious Product" class="product-image" style="width:205px;">
+            <h2 class="product-title">Fresh Bread</h2>
+            <p class="product-description">freshly baked bread with a soft and golden crust perfect for any meal!</p>
+            <div class="product-price"> $5.00 USD</div>
+            <button class="buy-button" onclick="add('Bread',5)">Buy Now</button>
+        </div>
+        <div class="product-card">
+            <img src="https://sweetfreedombakeshop.com/wp-content/uploads/White-Velvet-Cupcake.jpg" alt="Delicious Product" class="product-image">
+            <h2 class="product-title">Cupcakes  </h2>
+            <p class="product-description">Moist, flavorful cupcakes topped with creamy frosting—perfect for any celebration or sweet craving!</p>
+            <div class="product-price">Per piece : $1.00 USD</div>
+            <button class="buy-button" onclick="add('Cupcakes',1)">Buy Now</button>
+        </div>
+    </section>
+
+    <section class="flex">
+        <div class="product-card">
+            <img src="https://img.freepik.com/free-photo/chocolate-brownie-portion-isolated-white-background_123827-27904.jpg" alt="Delicious Product" class="product-image" style="width:170px;">
+            <h2 class="product-title">Brownies </h2>
+            <p class="product-description">Rich, fudgy brownies with a melt-in-your-mouth texture—pure chocolate bliss in every bite!</p>
+            <div class="product-price">Per kilogram : $11.00 USD</div>
+            <button class="buy-button">Buy Now</button>
+        </div>
+        <div class="product-card">
+            <img src="https://cdn.create.vista.com/api/media/small/234890582/stock-photo-tasty-doughnuts-white-background" alt="Delicious Product" class="product-image" style="width:170px;">
+            <h2 class="product-title">Doughnuts </h2>
+            <p class="product-description">Soft, fluffy doughnuts with a sweet glaze for a treat any time of day!</p>
+            <div class="product-price">Per kilogram : $11.00 USD</div>
+            <button class="buy-button">Buy Now</button>
+        </div>
+        <div class="product-card">
+            <img src="https://img.freepik.com/premium-photo/pie-with-white-background-high-quality-ultra-hd_889056-8032.jpg" alt="Delicious Product" class="product-image" style="width:130px;">
+            <h2 class="product-title">Pies  </h2>
+            <p class="product-description">Golden, flaky crusts filled with rich, flavorful fillings are the comfort dessert!</p>
+            <div class="product-price">Per kilogram : $11.00 USD</div>
+            <button class="buy-button">Buy Now</button>
+        </div>
+        <div class="product-card">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRzpOvkbz7kQcapHs2ZRV_r9VdIAOc8QKGWyg&s" alt="Delicious Product" class="product-image" style="width:170px;">
+            <h2 class="product-title">Eclairs</h2>
+            <p class="product-description">Versatile, hearty potatoes—perfect for mashing, roasting, or making crispy fries!</p>
+            <div class="product-price">Per kilogram : $11.00 USD</div>
+            <button class="buy-button">Buy Now</button>
+        </div>
+    </section>
+    <hr>
+    <section class="flex" id="drinks">
+        <div class="product-card">
+            <img src="https://png.pngtree.com/png-clipart/20241219/original/pngtree-transparent-plastic-water-bottles-with-clean-minimalist-design-isolated-on-a-png-image_17962527.png" alt="Delicious Product" class="product-image" style="width:200px;">
+            <h2 class="product-title">Water</h2>
+            <p class="product-description"> Stay refreshed and hydrated with our pure, crisp water – the perfect drink for any moment of the day!</p>
+            <div class="product-price"> $1.00 USD</div>
+            <button class="buy-button" onclick="add('Water',1)">Buy Now</button>
+        </div>
+
+        <div class="product-card">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRoc3UyTx8jj-ogGtFH3dMD_zYCa4xJjr9NDA&s" alt="Delicious Product" class="product-image" style="width:80px;">
+            <h2 class="product-title">Orange Juice</h2>
+            <p class="product-description">Start your day with the refreshing taste of our freshly squeezed orange juice – packed with natural sweetness and vitamin C!</p>
+            <div class="product-price">$1.50 USD</div>
+            <button class="buy-button" onclick="add('Orange Juice',1.5)">Buy Now</button>
+        </div>
+        <div class="product-card">
+            <img src="https://dtgxwmigmg3gc.cloudfront.net/imagery/assets/derivations/icon/512/512/true/eyJpZCI6IjFkMzBhZDJkMGJhN2IwYmEyMjJjMzRiNWZkNWQxNGUzLmpwZyIsInN0b3JhZ2UiOiJwdWJsaWNfc3RvcmUifQ?signature=0b2ca186293506ea0ab5d2e1f41fa11499dd2e4befd8d07079d4decf5ca3af10" alt="Delicious Product" class="product-image" style="width:120px;">
+            <h2 class="product-title">Iced Tea</h2>
+            <p class="product-description">Cool down with our refreshing iced tea, brewed to perfection and served ice-cold for a crisp, invigorating taste!</p>
+            <div class="product-price"> $1.00  USD</div>
+            <button class="buy-button" onclick="add('Iced tea',1)">Buy Now</button>
+        </div>
+        <div class="product-card">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTRjDpKaMPcMjqmovqhFIQVnMP7lNPgrIKFtw&s" alt="Delicious Product" class="product-image" style="width:170px;">
+            <h2 class="product-title">Pepsi</h2>
+            <p class="product-description">Enjoy the bold, refreshing taste of Pepsi – the perfect fizzy companion for any occasion!</p>
+            <div class="product-price"> $1.99 USD</div>
+            <button class="buy-button" onclick="add('Pepsi',1.99)">Buy Now</button>
+        </div>
+    </section>
+
+    <section class="flex" id="drinks">
+        <div class="product-card">
+            <img src="https://www.drinkhint.com/cdn/shop/files/Hint-16oz-Coconut-PDPBottle.jpg?v=1701913140" alt="Delicious Product" class="product-image" style="width:90px;">
+            <h2 class="product-title">Coconut Water </h2>
+            <p class="product-description"> Rehydrate naturally with our fresh coconut water – pure, refreshing, and packed with tropical goodness!</p>
+            <div class="product-price"> $3.99  USD</div>
+            <button class="buy-button">Buy Now</button>
+        </div>
+        <div class="product-card">
+            <img src="https://themaltgallery.com/cdn/shop/products/TMG-0693.jpg?v=1621943101" alt="Delicious Product" class="product-image" style="width:120px;">
+            <h2 class="product-title">Wine</h2>
+            <p class="product-description">this wine,is awash with an exotic fruity aroma along with spicy notes and spice of the Bekaa Valley.</p>
+            <div class="product-price">$5.19</div>
+            <button class="buy-button">Buy Now</button>
+        </div>
+        <div class="product-card">
+            <img src="https://i.pinimg.com/736x/35/60/f7/3560f700c67e105cc6893b32eeef33a1.jpg" alt="Delicious Product" class="product-image" style="width:120px;">
+            <h2 class="product-title">Iced Coffee</h2>
+            <p class="product-description">Fuel your day with our smooth and refreshing iced coffee – the perfect blend of chill and caffeine!</p>
+            <div class="product-price"> $0.99 USD</div>
+            <button class="buy-button">Buy Now</button>
+        </div>
+        <div class="product-card">
+            <img src="https://autobarlb.com/cdn/shop/products/almaza-beer.jpg?v=1601016061" alt="Delicious Product" class="product-image" style="width:120px;">
+            <h2 class="product-title">Beer</h2>
+            <p class="product-description">Enjoy the rich, refreshing taste of our beer – crafted to perfection for moments that matter!</p>
+            <div class="product-price">$1.99 USD</div>
+            <button class="buy-button">Buy Now</button>
+        </div>
+    </section>
+    <hr>
+    <section class="flex" id="asian">
+        <div class="product-card">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT5IUkTligbcPyBNwgnBeGb8DKmSoUdHrfVfg&s" alt="Delicious Product" class="product-image" style="width:140px;">
+            <h2 class="product-title">Spring Rolls </h2>
+            <p class="product-description"> Delight in the crispy perfection of our spring rolls, filled with fresh, flavorful ingredients and served with a tangy dipping sauce!</p>
+            <div class="product-price"> 6 pieces for :$5.99  USD</div>
+            <button class="buy-button" onclick="add('Spring Rolls',5.99)">Buy Now</button>
+        </div>
+        <div class="product-card">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS4bN0LVfCz8C8E2Ar4ChntvYdxbBFqeBVhvA&s" alt="Delicious Product" class="product-image" style="width:150px;">
+            <h2 class="product-title">Instant Ramen</h2>
+            <p class="product-description">Warm up with our savory ramen, featuring rich broth, tender noodles, and perfectly crafted toppings for a bowl of comfort and flavor!</p>
+            <div class="product-price">$3.00</div>
+            <button class="buy-button" onclick="add('Instant ramen',3)">Buy Now</button>
+        </div>
+        <div class="product-card">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRyAiHLfpkM5-agm5ga8_nlqXa2dW3MdrUynQ&s" alt="Delicious Product" class="product-image" style="width:100px;">
+            <h2 class="product-title">Kimchi</h2>
+            <p class="product-description">Add a spicy kick to your meal with our authentic kimchi – fermented to perfection for bold flavor and a healthy twist!</p>
+            <div class="product-price"> $4.99 USD</div>
+            <button class="buy-button" onclick="add('Kimchi',4.99)">Buy Now</button>
+        </div>
+        <div class="product-card">
+            <img src="https://img.freepik.com/premium-photo/sweet-mochi-ice-cream-isolated-white-background_787273-101414.jpg" alt="Delicious Product" class="product-image" style="width:120px;">
+            <h2 class="product-title">Mochi</h2>
+            <p class="product-description">Japanese rice cakes with various fillings like red bean or ice cream.</p>
+            <div class="product-price">4 pieces for : $3.99 USD</div>
+            <button class="buy-button" onclick="add('Mochi',3.99)">Buy Now</button>
+        </div>
+    </section>
+    <section class="flex" id="asian">
+        <div class="product-card">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSHlrhrgf8APsw4wS9dX-Yn0Is0N2sQ-U6wqQ&s" alt="Delicious Product" class="product-image" style="width:170px; height:100px;">
+            <h2 class="product-title">Sweet And Sour Pork</h2>
+            <p class="product-description"> Savor the perfect balance of tangy and sweet with our tender Sweet and Sour Pork, paired with vibrant peppers and juicy pineapple!"</p>
+            <div class="product-price"> 6 pieces for :$5.99  USD</div>
+            <button class="buy-button">Buy Now</button>
+        </div>
+        <div class="product-card">
+            <img src="https://www.cantonrep.com/gcdn/authoring/2009/07/14/NREP/ghows-OH-aaaf6e06-8095-46c1-a2c8-f6f2f917a454-6a05590a.jpeg?width=660&height=440&fit=crop&format=pjpg&auto=webp" alt="Delicious Product" class="product-image" style="width:150px;">
+            <h2 class="product-title">Asian Slaw</h2>
+            <p class="product-description">Crunch into freshness with our Asian slaw, a vibrant mix of cabbage, carrots, and sesame dressing that’s both light and full of flavor!</p>
+            <div class="product-price">$10.00</div>
+            <button class="buy-button">Buy Now</button>
+        </div>
+        <div class="product-card">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQxDQ5pBILLMqfUenPs15MSSAP7x01AgwZe7Q&s" alt="Delicious Product" class="product-image" style="width:150px;">
+            <h2 class="product-title">Sushi Rolls</h2>
+            <p class="product-description">Indulge in the delicate flavors of our sushi rolls, expertly crafted with fresh fish, perfectly seasoned rice, and vibrant toppings!</p>
+            <div class="product-price"> 6 pieces for : $11.99 USD</div>
+            <button class="buy-button">Buy Now</button>
+        </div>
+        <div class="product-card">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRF91wDdSjZYDCRAc6iA0yPAJU-xSRdRAksZw&s" alt="Delicious Product" class="product-image" style="width:100px;">
+            <h2 class="product-title">Bubble Tea</h2>
+            <p class="product-description">Quench your thirst with our refreshing bubble tea, a delightful blend of sweet tea, creamy milk, and chewy tapioca pearls!</p>
+            <div class="product-price"> $3.99 USD</div>
+            <button class="buy-button">Buy Now</button>
+        </div>
+    </section>
+    </main>
+    <script src="js.js" defer></script>
+
+    <footer>
+        <p>© 2025 Evergreen Market. All rights reserved.</p>
+        <p>Follow us: <a href="#">X</a> | <a href="#">Tiktok</a></p>
+    </footer>
+</body>
+</html>

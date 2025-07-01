@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8" />
+    <title>Rate</title>
+    <link rel="stylesheet" href="rate.css">
+</head>
+<body>
+
+    <header class="clip">
+        <nav>
+            <a href="home.html">
+                <img src="https://th.bing.com/th/id/R.cdf1b2eaf4537315efd1f515b76140bf?rik=%2fGNRW3FLp4NjPg&riu=http%3a%2f%2fpluspng.com%2fimg-png%2fshop-png-black-and-white-shop-icon-it-s-an-icon-for-finding-local-shopping-the-logo-is-a-square-png-50-px-1600.png&ehk=zRK5ZuwZ71sNUCbaSEQ1lgdjKus5kZTMZ76Np9yMnlc%3d&risl=&pid=ImgRaw&r=0" class="home" alt="Shop Home Icon" />
+            </a>
+            <ul>
+                <li class="h"><a href="home.html">Home</a></li>
+                <li class="h"><a href="products.html">Products</a></li>
+                <li class="h"><a href="rate.html">Rate</a></li>
+            </ul>
+            <a href="https://www.instagram.com/?hl=en">
+                <img src="https://www.nicepng.com/png/full/1-14885_instagram-logo-transparent-instagram-logo-vector.png" alt="Instagram" class="insta">
+            </a>
+            <a href="login.html">
+                <img src="https://iconape.com/wp-content/files/nb/368023/svg/person-logo-icon-png-svg.png" alt="Login" class="person">
+            </a>
+        </nav>
+    </header>
+
+    <main>
+        <section class="rate-section">
+            <div class="h1">
+                <h1>Rate Our Services</h1>
+            </div>
+            <p>We value your feedback! Please rate your experience with us.</p>
+
+            <div class="rating">
+                <span data-value="1">&#9733;</span>
+                <span data-value="2">&#9733;</span>
+                <span data-value="3">&#9733;</span>
+                <span data-value="4">&#9733;</span>
+                <span data-value="5">&#9733;</span>
+            </div>
+
+            <textarea id="feedback" placeholder="Leave your feedback here..."></textarea>
+            <button id="submit-rating" class="submit-rating">Submit</button>
+            <p id="response-message"></p>
+        </section>
+    </main>
+
+    <aside id="taskbar" class="taskbar">
+        <button class="closebtn" onclick="toggleSidebar()">X</button>
+        <h2 class="cart">Your Cart</h2>
+        <div id="listContainer"></div>
+        <h3 class="total">Total: $<span id="totalAmount">0</span></h3>
+        <button class="button" id="reset" onclick="resetTotal()">Clear Cart</button>
+        <button class="button" id="buy" onclick="prompt()">Purchase</button>
+    </aside>
+
+    <footer>
+        <p>© 2025 Evergreen Market. All rights reserved.</p>
+        <p>Follow us: 
+            <a href="https://help.x.com/en">X</a> | 
+            <a href="https://www.tiktok.com/en/">Tiktok</a>
+        </p>
+    </footer>
+
+    <script src="js.js"></script>
+</body>
+</html>

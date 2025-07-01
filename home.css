@@ -1,0 +1,473 @@
+html {
+    scroll-behavior: smooth;
+}
+
+*, *::before, *::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Tw Cen Mt';
+    font-size: 14px;
+    background-image: url('https://www.hdwallpapersfreedownload.com/uploads/large/3d-and-abstract/white-abstract-new-wallpapers.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    overflow-x: hidden;
+}
+
+header {
+    background: #51ae36;
+    position: fixed;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: linear-gradient(135deg, #65ae2c, #3e753f);
+    z-index: 10;
+    text-shadow: 2px 2px 5px #094b1a;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.3)
+}
+
+nav {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    width: 100%;
+    padding: 30px 0 10px;
+    justify-content: center;
+    gap: 20px;
+}
+
+nav .home {
+    width: 50px;
+    margin-left: 15px;
+    margin-bottom: 10px;
+}
+
+nav .insta {
+    width: 30px;
+    margin-bottom: 10px;
+}
+
+nav .person {
+    width: 35px;
+    margin-right: 15px;
+    margin-bottom: 10px;
+}
+
+nav .image {
+    width: 50px;
+    cursor: pointer;
+    margin-bottom: 10px;
+}
+
+    nav .image:hover, nav .person:hover, nav .insta:hover, nav .home:hover, nav .p:hover {
+        transition: transform 0.6s ease;
+        transform: scale(1.1);
+    }
+
+nav ul {
+    flex: 1;
+    display: flex;
+    justify-self: flex-end;
+    padding-right: 30px;
+    margin-bottom: 10px;
+}
+
+    nav ul li {
+        list-style: none;
+        margin-left: 30px;
+    }
+
+        nav ul li a {
+            text-decoration: none;
+            color: #fff;
+            font-size: 25px;
+            transition: font-size 0.3s ease, color 0.3s ease;
+        }
+
+            nav ul li a:hover {
+                color: #094b1a;
+            }
+
+nav .h:hover {
+    transition: transform 0.6s ease;
+    transform: scale(1.2);
+    cursor: pointer;
+}
+
+.image-container {
+  background-size: cover;
+  background-position: center;
+  display:flex;
+  justify-content: center;   
+  align-items: flex-end;  
+  text-align: center;
+}
+
+
+.hero-text {
+  font-size: 100px;
+  color: white;
+  font-weight: bold;
+  text-shadow: 2px 2px 8px rgba(0,0,0,0.6);
+  position: absolute;
+  bottom: 400px;
+}
+
+
+h4 {
+    margin-bottom: 20px;
+}
+
+
+.image1 {
+    width: 50%;
+    cursor: pointer;
+    margin-top: -60px;
+}
+
+.image2 {
+    width: 50%;
+    cursor: pointer;
+}
+
+.gallery {
+    display: flex;
+    flex-wrap: nowrap;
+    gap: 50px;
+    padding: 70px 0px 100px 103px;
+    animation: scrollGallery 20s linear infinite;
+}
+@keyframes scrollGallery {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-50%);
+    }
+}
+
+.gallery-item {
+    flex: 0 0 350px;
+    position: relative;
+    overflow: hidden;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    margin-top: 70px;
+}
+
+    .gallery-item:hover {
+        
+        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+    }
+
+    .gallery-item img {
+        width: 100%;
+        height: 250px;
+        object-fit: cover;
+        display: block;
+        border-bottom: 3px solid #ddd;
+    }
+
+    .gallery-item h3 {
+        text-align: center;
+        font-size: 18px;
+        color: #333;
+        margin: 10px;
+    }
+
+.image3 {
+    width:60%;
+    margin: 50px 0px 200px 30px;
+    border-radius: 10px;
+}
+
+.partie {
+    font-family: cursive;
+    font-size: 25px;
+    color: #000000;
+    text-align: center;
+    margin: 30px;
+    text-shadow: 2px 2px 2px #cbffdd;
+    padding: 40px;
+    border-radius: 10px;
+    
+}
+
+footer {
+    background: linear-gradient(135deg,#3e753f,#65ae2c);
+    color: white;
+    text-align: center;
+    padding: 60px;
+    bottom: 0;
+    width: 100%;
+}
+
+.slideshow-container {
+    width: 100%;
+    display: grid;
+}
+
+.slide {
+    grid-area: 1 / 1;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    transition: opacity 1.5s ease-in-out;
+    display: flex;
+}
+
+.active {
+    opacity: 1;
+}
+
+img {
+    width: 100%;
+    height: auto;
+}
+.cart {
+    color: #fff;
+    background-color: #224b0f;
+    margin: 10px;
+}
+
+.total {
+    margin: 10px;
+}
+
+.taskbar {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    right: 0;
+    top: 0;
+    background-color: whitesmoke;
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 60px;
+    color: black;
+    z-index: 9999;
+    border: solid;
+    border-color: rgba(0, 0, 0, 0.2);
+}
+
+    .taskbar.open {
+        width: 300px;
+        opacity: 1;
+    }
+
+.taskbar-content {
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.5s ease, visibility 0s 0s;
+}
+
+.taskbar.open .taskbar-content {
+    opacity: 0;
+    visibility: visible;
+    transition: opacity 0.5s ease, visibility 1s 1s;
+}
+
+.button {
+    margin-left: 10px;
+    cursor: pointer;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    font-size: 10px;
+    font-weight: bold;
+    height: 40px;
+    width: 90px;
+    font-size: 15px;
+    text-align: center;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+    .button:hover {
+        background-color: lightgrey;
+        box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+        transform: translateY(-2px);
+    }
+
+    .button:active {
+        background-color: grey; 
+        box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
+        transform: translateY(2px);
+    }
+#Cart {
+    text-align: center;
+    font-size: 30px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+#h3 {
+    font-size: 20px;
+}
+#carrots {
+    width: 140px;
+}
+
+#apples {
+    width: 110px;
+}
+
+#potatoes {
+    width: 140px;
+}
+
+.closebtn {
+    margin: 10px;
+    width: 50px;
+    height: auto;
+}
+
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+
+}
+.recipe-header {
+  text-align: center;
+  margin-top: 40px;
+  margin-bottom: 20px;
+}
+
+button {
+  padding: 12px 24px;
+  font-size: 16px;
+  background-color: #3da655;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #218838;
+}
+
+.meal {
+  margin-top: 30px;
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  max-width: 500px;
+  margin-left: auto;
+  margin-right: auto;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+.meal-img {
+  width: 350px;
+  border-radius: 10px;
+  margin: 10px auto;
+  display: block;
+  transition: filter 0.3s ease;
+}
+
+.meal-img.loading {
+  filter: blur(10px);
+}
+
+.meal-img.loaded {
+  filter: blur(0);
+}
+h2 {
+    text-align: center;
+}
+
+@media (max-width: 600px) {
+    nav ul li a {
+        font-size: 18px;
+    }
+
+    nav .home {
+        width: 35px;
+    }
+
+    nav .insta {
+        width: 22px;
+    }
+
+    nav .person {
+        width: 28px;
+    }
+
+    nav .image {
+        width: 35px;
+    }
+
+    nav ul li {
+        margin-left: 15px;
+    }
+    .hero-text {
+      font-size: 40px;
+      bottom: 550px;
+  }
+  .gallery-item img {
+        height: 200px;
+    }
+
+    .meal-img {
+    width: 200px;
+    }
+    .meal {
+    max-width: 400px;
+  }
+  .partie {
+    font-size: 15px; 
+  }
+}
+
+@media screen and (min-width: 601px) and (max-width: 992px) {
+    nav ul li a {
+        font-size: 23px;
+    }
+
+    nav .home {
+        width: 40px;
+    }
+
+    nav .insta {
+        width: 27px;
+    }
+
+    nav .person {
+        width: 33px;
+    }
+
+    nav .image {
+        width: 40px;
+    }
+
+    nav ul li {
+        margin-left: 20px;
+    }
+
+    .hero-text {
+      font-size: 60px;
+      bottom: 500px;
+  }
+  .meal-img {
+    width: 250px;
+  }
+  .meal {
+  max-width: 450px;
+  }
+  .partie {
+    font-size: 20px; 
+  }
+  
+}

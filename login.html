@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <title>Login</title>
+    <link rel="stylesheet" href="login.css">
+</head>
+<body>
+
+    <header class="image-container">
+        <h1 class="hero-text">Evergreen Market</h1>
+    </header>
+
+    <main>
+        <section class="form-container">
+            <form id="multiStepForm" novalidate>
+                <div class="step active" id="step1">
+                    <h3>Email address</h3>
+                    <input type="email" id="email" name="email" required>
+                    <div class="navigation">
+                        <span></span>
+                        <button type="button" onclick="nextStep(1)">Next</button>
+                    </div>
+                </div>
+
+                <div class="step" id="step2">
+                    <h3>Password</h3>
+                    <input type="password" id="password" name="password" required>
+                    <div class="navigation">
+                        <button type="button" onclick="prevStep(2)">Previous</button>
+                        <button type="button" onclick="nextStep(2)">Next</button>
+                    </div>
+                </div>
+
+                <div class="step" id="step3">
+                    <h3>Ready?</h3>
+                    <p>Click on "Log In" to continue.</p>
+                    <div class="navigation">
+                        <button type="button" onclick="prevStep(3)">Previous</button>
+                        <button type="submit">Log In</button>
+                    </div>
+                </div>
+            </form>
+        </section>
+    </main>
+
+    <script src="js.js"></script>
+</body>
+</html>

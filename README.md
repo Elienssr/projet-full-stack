@@ -2,7 +2,7 @@ a-
 Name : Elie Nassar
 
 b-
-- TheMealDB API (`https://www.themealdb.com/api.php`)  
+TheMealDB API (`https://www.themealdb.com/api.php`)  
 Used to fetch random recipes and display them dynamically on the homepage.
 
 c-
